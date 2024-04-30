@@ -1,0 +1,79 @@
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <script src="index.js"></script>
+  
+  <style>
+      
+      table, th, td {
+           border: 1px solid;
+      }
+      
+      #leftbox {
+                float:left; 
+                width:33%;
+                height:300px;
+      }
+      #middlebox{
+                float:left; 
+                width:33%;
+                height:300px;
+        }
+        #rightbox{
+                float:right;
+                width:33%;
+                height:300px;
+        }
+        h1{
+                color:green;
+                text-align:center;
+        }
+     
+     
+      
+  </style>
+</head>
+<body>
+  
+  <h1> Concrete Regression test </h1>
+  
+  
+  
+  
+    <div id = "boxes1">
+         
+      
+      
+
+  <label for="box1">Cement: </label><input type="text" id="box1" value="" placeholder="Kg per cubic meter"> x1 <br/>
+  <label for="box2">Blast Furnace Slag: </label>   <input type="text" id="box2" value=""  placeholder="Kg per cubic meter"> x2 <br/>
+  <label for="box3">Fly Ashe:</label>   <input type="text" id="box3" value=""  placeholder="Kg per cubic meter"> x3  <br/>
+  <label for="box4">Water:</label>   <input type="text" id="box4" value=""  placeholder="Kg per cubic meter">x4 <br/>
+  <label for="box5">Superplasticizer:</label>   <input type="text" id="box5" value=""  placeholder="Kilograms per cubic meter">x5 <br/>
+  <label for="box6">Course Aggregate:</label>   <input type="text" id="box6" value=""  placeholder="Kilograms per cubic meter"> x6 <br/>
+  <label for="box7">Fine Aggregate:</label>   <input type="text" id="box7" value=""  placeholder="Kilograms per cubic meter"> x7 <br/>
+  <label for="box8">Age:</label>   <input type="text" id="box8" value=""  placeholder="Age"> x8  <br/>
+  <!-- <input type="text" id="box9" value=""> x9 <br/> -->
+
+
+    </div> 
+      
+  <div>
+      <input style="background-color:yellow" type="button" value="Run" onclick="runExample()"/>
+   </div>
+  
+
+        <div id = "boxes2">
+              
+           
+              <h2>Inference </h2>
+              
+               <div id="predictions">
+               </div>
+              
+
+        </div>
+  
+
+</body>
+</html>
