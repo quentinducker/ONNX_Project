@@ -17,7 +17,7 @@ async function runExample() {
      
 
     let tensorX = new ort.Tensor('float32', x, [1, 8]);
-    let feeds = {"input": tensorX};
+    let feeds = {float_input: tensorX};
     
     console.log(x)
     console.log(tensorX)
