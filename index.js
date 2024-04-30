@@ -26,7 +26,7 @@ async function runExample() {
     let session = await ort.InferenceSession.create('onnx_model.onnx');
     let result = await session.run(feeds);
     console.log(result)
-    let outputData = result.variable.data;
+    let outputData = result.output.cpuData;
     
     outputData = parseFloat(outputData).toFixed(2)
    let predictions = document.getElementById('predictions');
