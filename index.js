@@ -16,7 +16,7 @@ async function runExample() {
      //x[8] = document.getElementById('box9').value;
      
 
-    let tensorX = new onnx.Tensor(x, 'float32', [1, 8]);
+    let tensorX = new ort.Tensor(x, 'float32', [1, 8]);
     let feeds = {float_input: tensorX};
 
     let session = await ort.InferenceSession.create('onnx_model.onnx');
