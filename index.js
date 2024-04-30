@@ -17,13 +17,13 @@ async function runExample() {
      
 
     let tensorX = new onnx.Tensor(x, 'float32', [1, 8]);
+    let feeds = {float_input: tensorX};
 
-    let session = new onnx.InferenceSession();
-
-    await session.loadModel("onnx_model.onnx");
-    let outputMap = await session.run([tensorX]);
-    let outputData = outputMap.get('output');
-
+    let session = await ort.InferenceSession.create('onnx_model .onnx');
+    let result = await session.run(feeds);
+    let outputData = result.variable.data;
+    
+    outputData = parseFloat(outputData).toFixed(2)
    let predictions = document.getElementById('predictions');
 
   predictions.innerHTML = ` <hr> Got an output tensor with values: <br/>
