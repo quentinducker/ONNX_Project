@@ -19,7 +19,7 @@ async function runExample() {
     let tensorX = new onnx.Tensor(x, 'float32', [1, 8]);
     let feeds = {float_input: tensorX};
 
-    let session = await ort.InferenceSession.create('onnx_model .onnx');
+    let session = await ort.InferenceSession.create('onnx_model.onnx');
     let result = await session.run(feeds);
     let outputData = result.variable.data;
     
