@@ -36,7 +36,7 @@ async function runExample() {
    <table>
      <tr>
        <td>  Concrete Result:  </td>
-       <td id="td0">  ${outputData.data[0].toFixed(2)}  </td> //may have to change this
+       <td id="td0">  ${outputData.toFixed(2)}  </td> //may have to change this
      </tr>
   </table>`;
     
